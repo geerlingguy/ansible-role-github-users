@@ -1,6 +1,6 @@
 # Ansible Role: GitHub Users
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-github-ssh-users.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-github-ssh-users)
+[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-github-users.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-github-users)
 
 Create users based on GitHub accounts.
 
@@ -29,7 +29,7 @@ A list of users to add to the server; the username will be the `name` (or the ba
     github_users_absent: []
       # You can specify an object with 'name' (required):
       # - name: geerlingguy
-
+    
       # Or you can specify a GitHub username directly:
       # - geerlingguy
 
@@ -58,7 +58,7 @@ None.
           - name: josh
     
       roles:
-        - geerlingguy.github-ssh-users
+        - geerlingguy.github-users
 
 If you want to make sure users' public keys are in sync, it is best to run the playbook on a cron, e.g. every 5 min, 10 min, or some other interval. That way you don't have to manually add new keys for users.
 
