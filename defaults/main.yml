@@ -13,3 +13,5 @@ github_users_absent: []
 
   # Or you can specify a GitHub username directly:
   # - geerlingguy
+
+github_users_authorized_keys_exclusive: yes

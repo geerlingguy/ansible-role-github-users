@@ -14,6 +14,7 @@
     user: "{{ item.name | default(item) }}"
     key: "https://github.com/{{ item.name | default(item) }}.keys"
     manage_dir: yes
+    exclusive: "{{ github_users_authorized_keys_exclusive }}"
   with_items: "{{ github_users }}"
 
 - name: Ensure user accounts in github_users_absent are absent.
