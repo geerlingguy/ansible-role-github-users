@@ -39,6 +39,10 @@ A list of users who should _not_ be present on the server. The role will ensure 
 
 Whether the users' `authorized_keys` files should exclusively contain keys from their GitHub account. This should normally be set to `yes` if you are only allowing users to log in using keys available in their GitHub accounts.
 
+    github_url: https://github.com
+
+By default, use public GitHub (i.e. https://github.com) as the source for users/keys. Override this to use a different GitHub instance/endpoint (e.g. GitHub Enterprise).
+
 If you need to give the user the ability to self-manage their `authorized_keys` file, then you should set this to `no`, and it will only append new keys, but never remove any additional keys (e.g. old keys removed from their GitHub profile, or keys the end user added manually) from the file.
 
 ## Dependencies

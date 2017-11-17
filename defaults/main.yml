@@ -15,3 +15,5 @@ github_users_absent: []
   # - geerlingguy
 
 github_users_authorized_keys_exclusive: yes
+
+github_url: https://github.com
