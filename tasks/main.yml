@@ -3,7 +3,7 @@
   user:
     name: "{{ item.name | default(item) }}"
     shell: /bin/bash
-    createhome: yes
+    createhome: true
     groups: "{{ item.groups | default(omit) }}"
     home: /home/{{ item.name | default(item) }}
     state: present
@@ -13,7 +13,7 @@
   authorized_key:
     user: "{{ item.name | default(item) }}"
     key: "{{ github_url }}/{{ item.name | default(item) }}.keys"
-    manage_dir: yes
+    manage_dir: true
     exclusive: "{{ github_users_authorized_keys_exclusive }}"
   with_items: "{{ github_users }}"
 

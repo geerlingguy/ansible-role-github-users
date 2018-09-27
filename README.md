@@ -35,9 +35,9 @@ A list of users to add to the server; the username will be the `name` (or the ba
 
 A list of users who should _not_ be present on the server. The role will ensure these user accounts are removed.
 
-    github_users_authorized_keys_exclusive: yes
+    github_users_authorized_keys_exclusive: true
 
-Whether the users' `authorized_keys` files should exclusively contain keys from their GitHub account. This should normally be set to `yes` if you are only allowing users to log in using keys available in their GitHub accounts.
+Whether the users' `authorized_keys` files should exclusively contain keys from their GitHub account. This should normally be set to `true` if you are only allowing users to log in using keys available in their GitHub accounts.
 
     github_url: https://github.com
 

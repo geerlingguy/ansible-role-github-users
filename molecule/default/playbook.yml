@@ -1,5 +1,7 @@
 ---
-- hosts: all
+- name: Converge
+  hosts: all
+  become: true
 
   vars:
     github_users_absent:
@@ -32,9 +34,9 @@
       user:
         name: "{{ item }}"
         shell: /bin/bash
-        createhome: no
+        createhome: false
       with_items: "{{ github_users_absent }}"
       when: apt_cache_update.changed
 
   roles:
-    - role_under_test
+    - role: geerlingguy.github-users
