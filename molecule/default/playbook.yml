@@ -10,7 +10,7 @@
 
   pre_tasks:
     - name: Update apt cache.
-      apt: update_cache=yes cache_valid_time=600
+      apt: update_cache=true cache_valid_time=600
       register: apt_cache_update
       when: ansible_os_family == 'Debian'
 
@@ -37,6 +37,7 @@
         createhome: false
       with_items: "{{ github_users_absent }}"
       when: apt_cache_update.changed
+      tags: ['skip_ansible_lint']
 
   roles:
     - role: geerlingguy.github-users
