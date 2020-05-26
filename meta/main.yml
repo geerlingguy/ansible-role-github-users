@@ -2,6 +2,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: github-users
   author: geerlingguy
   description: Create users based on GitHub accounts.
   company: "Midwestern Mac, LLC"
