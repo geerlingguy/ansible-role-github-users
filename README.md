@@ -1,6 +1,6 @@
 # Ansible Role: GitHub Users
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-github-users.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-github-users)
+[![Build Status](https://travis-ci.com/geerlingguy/ansible-role-github-users.svg?branch=master)](https://travis-ci.com/geerlingguy/ansible-role-github-users)
 
 Create users based on GitHub accounts.
 
