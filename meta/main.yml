@@ -2,8 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  # See: https://github.com/ansible/galaxy/issues/2393
-  # role_name: github-users
+  role_name: github-users
   author: geerlingguy
   description: Create users based on GitHub accounts.
   company: "Midwestern Mac, LLC"
