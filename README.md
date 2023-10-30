@@ -17,9 +17,10 @@ None.
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
     github_users: []
-      # You can specify an object with 'name' (required) and 'groups' (optional):
+      # You can specify an object with 'name' (required), 'groups' (optional) and 'shell' (optional):
       # - name: geerlingguy
       #   groups: www-data,sudo
+      #   shell: /bin/bash
     
       # Or you can specify a GitHub username directly:
       # - geerlingguy
@@ -62,6 +63,9 @@ None.
           # Or if you don't need to override anything, you can specify the
           # GitHub username directly:
           - fabpot
+          # An user with a custom shell
+          - name: jon
+            shell: /bin/zsh
     
         github_users_absent:
           - johndoe
