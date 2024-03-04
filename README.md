@@ -20,7 +20,7 @@ Available variables are listed below, along with default values (see `defaults/m
       # You can specify an object with 'name' (required) and 'groups' (optional):
       # - name: geerlingguy
       #   groups: www-data,sudo
-    
+
       # Or you can specify a GitHub username directly:
       # - geerlingguy
 
@@ -29,7 +29,7 @@ A list of users to add to the server; the username will be the `name` (or the ba
     github_users_absent: []
       # You can specify an object with 'name' (required):
       # - name: geerlingguy
-    
+
       # Or you can specify a GitHub username directly:
       # - geerlingguy
 
@@ -52,7 +52,7 @@ None.
 ## Example Playbook
 
     - hosts: servers
-    
+
       vars:
         github_users:
           # You can specify the `name`:
@@ -62,11 +62,14 @@ None.
           # Or if you don't need to override anything, you can specify the
           # GitHub username directly:
           - fabpot
-    
+          # If you want a different machine_name
+          - name: geerlingguy
+            machine_name: foo
+
         github_users_absent:
           - johndoe
           - name: josh
-    
+
       roles:
         - geerlingguy.github-users
 
