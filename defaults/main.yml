@@ -1,6 +1,12 @@
 ---
 github_users: []
-# You can specify an object with 'name' (required) and 'groups' (optional):
+# You can specify an object with 'name' (required) and 'groups' (optional)
+# or a `machine_name` (optional) that is different from the GitHub username:
+# - name: geerlingguy
+#   groups: www-data,sudo
+#   machine_name: geerling
+
+# If no `machine_name` is used, the `name` will be used for the system user.
 # - name: geerlingguy
 #   groups: www-data,sudo
 
