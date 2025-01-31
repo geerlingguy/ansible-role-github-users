@@ -1,6 +1,6 @@
 # Ansible Role: GitHub Users
 
-[![CI](https://github.com/geerlingguy/ansible-role-github-users/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-github-users/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-github-users/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-github-users/actions/workflows/ci.yml)
 
 Create users based on GitHub accounts.
 
