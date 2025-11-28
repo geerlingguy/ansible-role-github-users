@@ -12,7 +12,7 @@
     - name: Update apt cache.
       apt: update_cache=true cache_valid_time=600
       register: apt_cache_update
-      when: ansible_os_family == 'Debian'
+      when: ansible_facts.os_family == 'Debian'
 
     - name: Set up github_users for Debian.
       set_fact:
@@ -20,7 +20,7 @@
           - name: geerlingguy
             groups: sudo
           - fabpot
-      when: ansible_os_family == 'Debian'
+      when: ansible_facts.os_family == 'Debian'
 
     - name: Set up github_users for RedHat.
       set_fact:
@@ -28,7 +28,7 @@
           - name: geerlingguy
             groups: wheel
           - fabpot
-      when: ansible_os_family == 'RedHat'
+      when: ansible_facts.os_family == 'RedHat'
 
     - name: Add users to be removed on first run.
       user:
