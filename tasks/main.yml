@@ -2,7 +2,7 @@
 - name: Ensure GitHub user accounts are present.
   user:
     name: "{{ item.name | default(item) }}"
-    shell: /bin/bash
+    shell: "{{ item.shell | default('/bin/bash') }}"
     createhome: true
     groups: "{{ item.groups | default(omit) }}"
     home: /home/{{ item.name | default(item) }}
