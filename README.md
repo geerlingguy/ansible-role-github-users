@@ -10,7 +10,10 @@ It's kind of a cheap way to do public key management for users on your system...
 
 ## Requirements
 
-None.
+This role uses the `ansible.posix.authorized_key` module. If you are using
+`ansible-core`, install the `ansible.posix` collection first:
+
+    ansible-galaxy collection install ansible.posix
 
 ## Role Variables
 

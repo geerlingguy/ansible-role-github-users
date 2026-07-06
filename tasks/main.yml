@@ -10,7 +10,7 @@
   with_items: "{{ github_users }}"
 
 - name: Ensure authorized_keys for GitHub user accounts are present.
-  authorized_key:
+  ansible.posix.authorized_key:
     user: "{{ item.name | default(item) }}"
     key: "{{ github_url }}/{{ item.name | default(item) }}.keys"
     manage_dir: true
